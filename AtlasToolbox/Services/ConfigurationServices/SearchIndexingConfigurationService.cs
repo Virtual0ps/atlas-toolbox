@@ -24,7 +24,7 @@ namespace AtlasToolbox.Services.ConfigurationServices
         public void Disable()
         {
             ServiceHelper.SetStartupType(WSEARCH_SERVICE_NAME, ServiceStartMode.Disabled);
-            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 1);
+            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 0);
 
             _searchIndexingConfigurationStore.CurrentSetting = IsEnabled();
         }
@@ -32,7 +32,7 @@ namespace AtlasToolbox.Services.ConfigurationServices
         public void Enable()
         {
             ServiceHelper.SetStartupType(WSEARCH_SERVICE_NAME, ServiceStartMode.Automatic);
-            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 0);
+            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 1);
 
             _searchIndexingConfigurationStore.CurrentSetting = IsEnabled();
         }
