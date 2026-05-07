@@ -40,6 +40,7 @@ namespace AtlasToolbox.Services.ConfigurationServices
             RegistryHelper.SetValue(FACIAL_FEATURES_KEY_NAME, ENABLED_VALUE_NAME, 0, Microsoft.Win32.RegistryValueKind.DWord);
             RegistryHelper.SetValue(FINGERPRINT_FEATURES_KEY_NAME, ENABLED_VALUE_NAME, 0, Microsoft.Win32.RegistryValueKind.DWord);
             RegistryHelper.SetValue(ALLOW_SIGN_IN_OPTIONS_KEY_NAME, VALUE_VALUE_NAME, 0, Microsoft.Win32.RegistryValueKind.DWord);
+            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 0);
 
             configurationStore.CurrentSetting = IsEnabled();
         }
@@ -52,6 +53,7 @@ namespace AtlasToolbox.Services.ConfigurationServices
             RegistryHelper.SetValue(FACIAL_FEATURES_KEY_NAME, ENABLED_VALUE_NAME, 1, Microsoft.Win32.RegistryValueKind.DWord);
             RegistryHelper.SetValue(FINGERPRINT_FEATURES_KEY_NAME, ENABLED_VALUE_NAME, 1, Microsoft.Win32.RegistryValueKind.DWord);
             RegistryHelper.SetValue(ALLOW_SIGN_IN_OPTIONS_KEY_NAME, VALUE_VALUE_NAME, 1, Microsoft.Win32.RegistryValueKind.DWord);
+            RegistryHelper.SetValue(ATLAS_STORE_KEY_NAME, STATE_VALUE_NAME, 1);
 
             configurationStore.CurrentSetting = IsEnabled();
         }
